@@ -25,29 +25,30 @@ Salad            Rs.70
 Pizza            Rs.80
 """)
 
-order_total = 0
+total_amount = 0
 
-order_item = input("Enter the name of item you want to order : ").capitalize()
+selected_item = input(
+    "Enter the name of item you want to order : ").capitalize()
 
-if order_item in menu:
-    order_total += menu[order_item]
-    print(f"Your item {order_item} has been Added to your order")
+if selected_item in menu:
+    total_amount += menu[selected_item]
+    print(f"Your item {selected_item} has been Added to your order")
 
 else:
-    print(f"Your item {order_item} is not available!")
+    print(f"Your item {selected_item} is not available!")
 
-another_order = input("Do you want order another item ? (yes/no)")
-while another_order.lower() == "yes":
-    order_item_2 = input(
+continue_ordering = input("Do you want order another item ? (yes/no)")
+while continue_ordering.lower() == "yes":
+    additional_item = input(
         "Enter the name of another item you want to order : ").capitalize()
-    if order_item_2 in menu:
-        order_total += menu[order_item_2]
-        print(f"Your item {order_item_2} has been Added to your order")
+    if additional_item in menu:
+        total_amount += menu[additional_item]
+        print(f"Your item {additional_item} has been Added to your order")
 
     else:
-        print(f"Your item {order_item_2} is not available!")
+        print(f"Your item {additional_item} is not available!")
 
-    another_order = input("Do you want order another item ? (yes/no)")
-    if another_order != "yes":
+    continue_ordering = input("Do you want order another item ? (yes/no)")
+    if continue_ordering != "yes":
         break
-print(f"Sir, Total Amount of your order is {order_total}.")
+print(f"Sir, Total Amount of your order is {total_amount}.")
