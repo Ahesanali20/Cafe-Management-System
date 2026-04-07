@@ -1,4 +1,10 @@
-# Menu Of Restaurant
+"""
+A simple restaurant menu management system that allows customers to order items
+from a predefined menu and calculate the total cost of their order.
+
+The module displays a menu, takes customer orders, validates item availability,
+and calculates the total amount due.
+"""
 
 menu = {
     'Burger' : 40,
@@ -8,8 +14,16 @@ menu = {
     'Pizza' : 80,
 }
 
-print("Welcome To SKYWAY RESTAURENT")
-print("Burger : Rs.40\nPasta : Rs.50\nCoffee : Rs.60\nSalad : Rs.70\nPizza : Rs.80\n")
+print("""
+Welcome To SKYWAY RESTAURANT
+
+Menu:
+Burger           Rs.40
+Pasta            Rs.50
+Coffee           Rs.60
+Salad            Rs.70
+Pizza            Rs.80
+""")
 
 order_total = 0
 
